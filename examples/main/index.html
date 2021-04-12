@@ -20,7 +20,12 @@
         <li onclick="push('/vue')">Vue</li>
         <li onclick="push('/vue3')">Vue3</li>
         <li onclick="push('/angular9')">Angular9</li>
-        <li onclick="push('/purehtml')">Purehtml</li>
+        <li onclick="push('/purehtml')">Purehtml</li>     
+        <li onclick="push('/dashboard/list')">dashboard</li>
+        <li onclick="push('/container/src/apps/application/saic-src/views/dataservice/dataset')">dataset</li>
+        <li onclick="push('/container/src/apps/application/saic-src/views/reportservice/dashboard')">dashboard</li>
+        <li onclick="push('/logdb/search/log')">search</li>
+        <li onclick="push('/homeApp')">homeApp</li>
       </ul>
       <!-- 子应用  -->
       <main id="subapp-container"></main>
@@ -30,6 +35,9 @@
   <script>
     function push(subapp) { history.pushState(null, subapp, subapp) }
   </script>
+   <script>
+    
+   </script>
 </body>
 
 </html>

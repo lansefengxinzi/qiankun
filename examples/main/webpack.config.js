@@ -5,8 +5,10 @@ module.exports = {
   entry: process.env.MODE === 'multiple' ? './multiple.js' : './index.js',
   devtool: 'source-map',
   devServer: {
+    inline: false,
     open: true,
     port: '7099',
+    host: '0.0.0.0',
     clientLogLevel: 'warning',
     disableHostCheck: true,
     compress: true,
@@ -15,6 +17,14 @@ module.exports = {
     },
     historyApiFallback: true,
     overlay: { warnings: false, errors: true },
+    proxy: {
+      '/pandora': {
+        target: 'http://0.0.0.0:8080',
+        pathRewrite: {
+          '^/pandora': ''
+        }
+      }
+    }
   },
   output: {
     publicPath: '/',

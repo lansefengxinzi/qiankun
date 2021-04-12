@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { loadMicroApp } from '../../../es';
 
 /**
  * 渲染子应用
  */
 function Render(props) {
   const { loading } = props;
+
+  
 
   return (
     <>

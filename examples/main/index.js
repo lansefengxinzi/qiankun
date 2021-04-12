@@ -22,6 +22,7 @@ const loader = loading => render({ loading });
 
 registerMicroApps(
   [
+
     {
       name: 'react16',
       entry: '//localhost:7100',
@@ -64,6 +65,46 @@ registerMicroApps(
       loader,
       activeRule: '/vue3',
     },
+    {
+      name: 'dataset',
+      entry: 'http://0.0.0.0:7099/pandora',
+      container: '#subapp-viewport',
+      loader,
+      activeRule: '/container/src',
+      props: {
+        token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvcmdOYW1lIjoi5peg57uE57uHIiwidGVuYW50TmFtZSI6IuaXoOenn-aItyIsInBob25lIjoiMTgzMTEyNzA5NTEiLCJuYW1lIjoieGlhb3l4IiwiaXNBZG1pbiI6MSwidXNlcklkIjoiMiIsImVtYWlsIjoieXVodWl0aW5nQGhhcm1vbnljbG91ZC5jbiIsInVzZXJuYW1lIjoidGltZSJ9.8Bu5wiUtGHstDAYGRBp2V-AfR3KB-m5DtS6oFOlVzG0',
+        isFullScreen: true,
+        hideFeedback: true,
+        basePath: '/container/src'
+      }
+    },
+    {
+      name: 'dashboard',
+      entry: 'http://0.0.0.0:7099/pandora',
+      container: '#subapp-viewport',
+      loader,
+      // activeRule: '/container/src/apps/application/saic-src/views/reportservice',
+      activeRule: '/container/src/apps/application/saic-src/views/dataservice/datacollection',
+      props: {
+        token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvcmdOYW1lIjoi5peg57uE57uHIiwidGVuYW50TmFtZSI6IuaXoOenn-aItyIsInBob25lIjoiMTgzMTEyNzA5NTEiLCJuYW1lIjoieGlhb3l4IiwiaXNBZG1pbiI6MSwidXNlcklkIjoiMiIsImVtYWlsIjoieXVodWl0aW5nQGhhcm1vbnljbG91ZC5jbiIsInVzZXJuYW1lIjoidGltZSJ9.8Bu5wiUtGHstDAYGRBp2V-AfR3KB-m5DtS6oFOlVzG0',
+        isFullScreen: true,
+        hideFeedback: true,
+        basePath: '/container/src'
+      }
+    },
+    {
+      name: 'search',
+      entry: 'http://0.0.0.0:7099/pandora',
+      container: '#subapp-viewport',
+      loader,
+      activeRule: '/logdb/search',
+      props: {
+        // token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvcmdOYW1lIjoi5peg57uE57uHIiwidGVuYW50TmFtZSI6IuaXoOenn-aItyIsInBob25lIjoiMTgzMTEyNzA5NTEiLCJuYW1lIjoieGlhb3l4IiwiaXNBZG1pbiI6MSwidXNlcklkIjoiMiIsImVtYWlsIjoieXVodWl0aW5nQGhhcm1vbnljbG91ZC5jbiIsInVzZXJuYW1lIjoidGltZSJ9.8Bu5wiUtGHstDAYGRBp2V-AfR3KB-m5DtS6oFOlVzG0',
+        isFullScreen: true,
+        hideFeedback: true,
+        basePath: '/container/src'
+      }
+    }
   ],
   {
     beforeLoad: [
